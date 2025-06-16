@@ -1,0 +1,198 @@
+body {
+    font-family: 'Lexend', sans-serif;
+    background: #f8f6f3;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+    background-color: brown;
+    padding: 0;
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    line-height: 1.1;
+}
+
+.shield {
+    height: 70px;
+}
+
+.title {
+    color: black;
+    font-size: 30px;
+    font-style: normal;
+    padding: 0 10px;
+    display: inline-block;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.version {
+    color: black;
+    font-style: italic;
+    font-size: 13px;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.info {
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    border: 2.2px solid brown;
+    border-radius: 8px;
+    margin: 20px auto 10px auto;
+    padding: 20px 30px;
+    max-width: 700px;
+    font-size: 1.1em;
+}
+.info h2 {
+    margin-top: 0;
+    color: #7a2c17;
+    font-size: 1.4em;
+}
+.info ul {
+    margin: 0;
+    padding-left: 20px;
+}
+.info li {
+    margin-bottom: 8px;
+}
+
+.txtas {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    position: relative;
+    z-index: 1;
+}
+
+.txtas::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 340px;
+    height: 340px;
+    background-image: url('img/SPEM Emblem.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 0.18;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.txtas div {
+    text-align: center;
+    padding: 0 20px 10px 20px;
+}
+
+.txtas h2 {
+    font-size: 25px;
+    border: 2.2px solid brown;
+    border-radius: 8px;
+    padding: 10px 0px;
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.txtas textarea {
+    width: 350px;
+    height: 350px;
+    resize: none;
+    font-size: 18px;
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    border: 2.2px solid brown;
+    border-radius: 8px;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin: 0 0 100px 0;
+}
+
+.clear-btn {
+    width: 85px !important;    
+}
+
+.options button {
+    background: #7a2c17;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    width: 180px;
+    height: 30px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.options button:hover {
+    background: #a33d1e;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: brown;
+    padding: 0;
+    text-align: center;
+    flex-direction: column;
+    gap: 0;
+    line-height: 1.1;
+}
+
+/* Responsive styles for article.txtas */
+@media (max-width: 900px) {
+  .txtas {
+    flex-direction: column;
+    max-width: 98vw;
+  }
+  .txtas div {
+    padding: 0 0 20px 0;
+  }
+  .txtas textarea {
+    width: 90vw;
+    max-width: 98vw;
+    height: 200px;
+    font-size: 16px;
+  }
+  .txtas::before {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 600px) {
+  .txtas h2 {
+    font-size: 18px;
+    padding: 7px 0;
+  }
+  .txtas textarea {
+    height: 120px;
+    font-size: 14px;
+  }
+  .txtas::before {
+    width: 120px;
+    height: 120px;
+  }
+}

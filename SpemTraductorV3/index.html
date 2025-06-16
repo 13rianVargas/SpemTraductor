@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpemTraductor V3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img class="shield" src="img/SPEM Shield.png"></img>
+            <h1 class="title">SpemTraductor</h1>
+            <p class="version">Versión III</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="info">
+            <h2>¿Cómo usar SpemTraductor?</h2>
+            <ul>
+                <li>Para encriptar, escribe tu texto en el cuadro "Sin Encriptar" para ver su traducción en el cuadro "Encriptado".</li>
+                <li>Para desencriptar, escribe tu texto en el cuadro "Encriptado" para ver su traducción en el cuadro "Sin Encriptar".</li>
+                <li>Usa los botones para copiar fácilmente tu resultado.</li>
+            </ul>
+        </section>
+        <article class="txtas">
+            <div>
+                <h2>Sin Encriptar</h2>
+                <textarea id="original" placeholder="Ejemplo: Clan Spem" oninput="encrypt()"></textarea>
+            </div>
+            <div>
+                <h2>Encriptado</h2>
+                <textarea id="encrypted" placeholder="3k342no: Dnaq 1234" oninput="decrypt()"></textarea>
+            </div>
+        </article>
+        <section class="options">
+            <button class="copy-original" onclick="copyOriginal()">Copiar Original</button>
+            <button class="clear-btn" onclick="clearTextareas()">Limpiar</button>
+            <button class="copy-encrypted" onclick="copyEncrypted()">Copiar Encriptado</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 SpemTraductor. Todos los derechos reservados.</p>
+        <p>Created by <a href=https://linktr.ee/13rianVargas">13rian Vargas</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
