@@ -114,7 +114,7 @@ header {
     width: 350px;
     height: 350px;
     resize: none;
-    font-size: 18px;
+    font-size: 20px;
     background: rgba(255,255,255,0.95);
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     border: 2.2px solid brown;
@@ -138,7 +138,7 @@ header {
     border: none;
     border-radius: 6px;
     width: 180px;
-    height: 30px;
+    height: 40px;
     font-size: 1em;
     cursor: pointer;
     transition: background 0.2s;
@@ -159,6 +159,12 @@ footer{
     flex-direction: column;
     gap: 0;
     line-height: 1.1;
+    font-style: normal;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 7px;
 }
 
 /* Responsive styles for article.txtas */
@@ -174,7 +180,7 @@ footer{
     width: 90vw;
     max-width: 98vw;
     height: 200px;
-    font-size: 16px;
+    font-size: 20px;
   }
   .txtas::before {
     width: 220px;
@@ -189,7 +195,7 @@ footer{
   }
   .txtas textarea {
     height: 120px;
-    font-size: 14px;
+    font-size: 20px;
   }
   .txtas::before {
     width: 120px;
