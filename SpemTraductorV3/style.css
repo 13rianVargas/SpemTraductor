@@ -46,8 +46,8 @@ header {
 }
 
 .info {
-    background: rgba(255,255,255,0.95);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
     border: 2.2px solid brown;
     border-radius: 8px;
     margin: 20px auto 10px auto;
@@ -55,15 +55,18 @@ header {
     max-width: 700px;
     font-size: 1.1em;
 }
+
 .info h2 {
     margin-top: 0;
     color: #7a2c17;
     font-size: 1.4em;
 }
+
 .info ul {
     margin: 0;
     padding-left: 20px;
 }
+
 .info li {
     margin-bottom: 8px;
 }
@@ -106,8 +109,8 @@ header {
     border: 2.2px solid brown;
     border-radius: 8px;
     padding: 10px 0px;
-    background: rgba(255,255,255,0.95);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
 }
 
 .txtas textarea {
@@ -115,8 +118,8 @@ header {
     height: 350px;
     resize: none;
     font-size: 20px;
-    background: rgba(255,255,255,0.95);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
     border: 2.2px solid brown;
     border-radius: 8px;
 }
@@ -129,7 +132,7 @@ header {
 }
 
 .clear-btn {
-    width: 85px !important;    
+    width: 85px !important;
 }
 
 .options button {
@@ -148,11 +151,11 @@ header {
     background: #a33d1e;
 }
 
-footer{
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    height: 120px;
     background-color: brown;
     padding: 0;
     text-align: center;
@@ -169,36 +172,41 @@ footer p {
 
 /* Responsive styles for article.txtas */
 @media (max-width: 900px) {
-  .txtas {
-    flex-direction: column;
-    max-width: 98vw;
-  }
-  .txtas div {
-    padding: 0 0 20px 0;
-  }
-  .txtas textarea {
-    width: 90vw;
-    max-width: 98vw;
-    height: 200px;
-    font-size: 20px;
-  }
-  .txtas::before {
-    width: 220px;
-    height: 220px;
-  }
+    .txtas {
+        flex-direction: column;
+        max-width: 98vw;
+    }
+
+    .txtas div {
+        padding: 0 0 20px 0;
+    }
+
+    .txtas textarea {
+        width: 90vw;
+        max-width: 98vw;
+        height: 200px;
+        font-size: 20px;
+    }
+
+    .txtas::before {
+        width: 220px;
+        height: 220px;
+    }
 }
 
 @media (max-width: 600px) {
-  .txtas h2 {
-    font-size: 18px;
-    padding: 7px 0;
-  }
-  .txtas textarea {
-    height: 120px;
-    font-size: 20px;
-  }
-  .txtas::before {
-    width: 120px;
-    height: 120px;
-  }
+    .txtas h2 {
+        font-size: 18px;
+        padding: 7px 0;
+    }
+
+    .txtas textarea {
+        height: 120px;
+        font-size: 20px;
+    }
+
+    .txtas::before {
+        width: 120px;
+        height: 120px;
+    }
 }
