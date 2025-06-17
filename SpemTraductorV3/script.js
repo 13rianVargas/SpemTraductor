@@ -99,17 +99,31 @@ function encrypt() {
 // Función para copiar el texto original
 function copyOriginal() {
     const original = document.getElementById('original');
-    original.select();
-    document.execCommand('copy');
-    showMessage('Texto original copiado al portapapeles');
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(original.value)
+            .then(() => showMessage('Texto original copiado al portapapeles'));
+    } else {
+        // Fallback para navegadores antiguos
+        original.select();
+        document.execCommand('copy');
+        showMessage('Texto original copiado al portapapeles');
+        window.getSelection().removeAllRanges();
+    }
 }
 
 // Función para copiar el texto encriptado
 function copyEncrypted() {
     const encrypted = document.getElementById('encrypted');
-    encrypted.select();
-    document.execCommand('copy');
-    showMessage('Texto encriptado copiado al portapapeles');
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(encrypted.value)
+            .then(() => showMessage('Texto encriptado copiado al portapapeles'));
+    } else {
+        // Fallback para navegadores antiguos
+        encrypted.select();
+        document.execCommand('copy');
+        showMessage('Texto encriptado copiado al portapapeles');
+        window.getSelection().removeAllRanges();
+    }
 }
 
 // Función para limpiar ambos cuadros de texto
