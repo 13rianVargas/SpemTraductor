@@ -12,45 +12,47 @@
 <body>
 
     <header>
-        <div class="logo">
-            <img class="shield" src="img/SPEM Shield.png"></img>
-            <h1 class="title">SpemTraductor</h1>
-            <p class="version">Versión III</p>
-        </div>
+        <img src="img/SPEM Shield.png"></img>
+        <h1>SpemTraductor</h1>
+        <p>Versión III</p>
     </header>
 
-    <main class="container">
+    <main>
+
         <section class="info">
             <h2>¿Cómo usar SpemTraductor?</h2>
             <ul>
-                <li>Para encriptar, escribe tu texto en el cuadro "Sin Encriptar" para ver su traducción en el cuadro
+                <li>Para encriptar, escribe tu texto en el cuadro "Sin Encriptar" y verás la traducción en el cuadro
                     "Encriptado".</li>
-                <li>Para desencriptar, escribe tu texto en el cuadro "Encriptado" para ver su traducción en el cuadro
+                <li>Para desencriptar, escribe tu texto en el cuadro "Encriptado" y verás la traducción en el cuadro
                     "Sin Encriptar".</li>
                 <li>Usa los botones para copiar fácilmente tu resultado.</li>
             </ul>
         </section>
+
+        <section class="clear">
+            <button class="clear-btn" onclick="clearTextareas()">Limpiar Campos</button>
+        </section>
+
         <article class="txtas">
             <div>
                 <h2>Sin Encriptar</h2>
                 <textarea id="original" placeholder="Ejemplo: Clan Spem" oninput="encrypt()"></textarea>
+                <button class="copy-original" onclick="copyOriginal()">Copiar Original</button>
             </div>
             <div>
                 <h2>Encriptado</h2>
                 <textarea id="encrypted" placeholder="3k342no: Dnaq 1234" oninput="decrypt()"></textarea>
+                <button class="copy-encrypted" onclick="copyEncrypted()">Copiar Encriptado</button>
             </div>
         </article>
-        <section class="options">
-            <button class="copy-original" onclick="copyOriginal()">Copiar Original</button>
-            <button class="clear-btn" onclick="clearTextareas()">Limpiar</button>
-            <button class="copy-encrypted" onclick="copyEncrypted()">Copiar Encriptado</button>
-        </section>
     </main>
 
     <footer>
-        <p>© 2025 SpemTraductor. Todos los derechos reservados.</p>
-        <p>Created by <a href="https://linktr.ee/13rianVargas">13rian Vargas</a>
-        <p>Si deseas modificar este proyecto, envía un PR a este <a
+        <p>© 2025 SpemTraductor.</p>
+        <p>Todos los derechos reservados.</p>
+        <p>Created by <a href="https://linktr.ee/13rianVargas">13rian Vargas</a>.</p>
+        <p class="repo">Para modificar este proyecto, puedes envíar un "Pull Request" en este <a
                 href="https://github.com/13rianVargas/SpemTraductor">repositorio</a>.</p>
     </footer>
 

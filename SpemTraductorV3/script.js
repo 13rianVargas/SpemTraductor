@@ -116,7 +116,7 @@ function copyEncrypted() {
 function clearTextareas() {
     document.getElementById('original').value = '';
     document.getElementById('encrypted').value = '';
-    showMessage('Campos limpiados');
+    showMessage('Campos limpios');
 }
 
 
@@ -127,16 +127,19 @@ function showMessage(msg) {
         messageDiv = document.createElement('div');
         messageDiv.id = 'copy-message';
         messageDiv.style.position = 'fixed';
-        messageDiv.style.bottom = '30px';
+        messageDiv.style.top = '50%';
         messageDiv.style.left = '50%';
-        messageDiv.style.transform = 'translateX(-50%)';
+        messageDiv.style.transform = 'translate(-50%, -50%)';
         messageDiv.style.background = '#7a2c17';
         messageDiv.style.color = '#fff';
-        messageDiv.style.padding = '12px 28px';
-        messageDiv.style.borderRadius = '8px';
-        messageDiv.style.fontSize = '1.1em';
-        messageDiv.style.boxShadow = '0 2px 8px rgba(0,0,0,0.12)';
+        messageDiv.style.padding = '20px 48px';
+        messageDiv.style.borderRadius = '16px';
+        messageDiv.style.fontSize = '1.7em';
+        messageDiv.style.fontWeight = 'bold';
+        messageDiv.style.boxShadow = '0 4px 16px rgba(0,0,0,0.18)';
         messageDiv.style.zIndex = '9999';
+        messageDiv.style.display = 'none';
+        messageDiv.style.textAlign = 'center';
         document.body.appendChild(messageDiv);
     }
     messageDiv.textContent = msg;
