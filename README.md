@@ -20,7 +20,6 @@
 ## 📋 Tabla de Contenidos
 
 - [Sobre el Proyecto](#sobre-el-proyecto)
-- [SpemCode](#spemcode)
 - [Características](#características)
 - [Tecnologías](#tecnologías)
 - [Cómo Usar](#cómo-usar)
@@ -37,52 +36,6 @@
 **SpemTraductor** es una herramienta web que permite encriptar y desencriptar texto utilizando el cifrado **SpemCode**, un sistema de sustitución de caracteres único creado para la comunicación interna del Clan SPEM.
 
 La aplicación ofrece una interfaz intuitiva y bidireccional: puedes escribir texto normal para encriptarlo, o pegar texto encriptado para revelarlo.
-
----
-
-## 🔐 SpemCode
-
-El **SpemCode** es un cifrado de sustitución donde cada letra del alfabeto se reemplaza por otra según la siguiente tabla:
-
-### Tabla de Sustitución
-
-| Original | Encriptado |
-|:--------:|:----------:|
-| A | A |
-| B | C |
-| C | D |
-| D | F |
-| E | 3 |
-| F | G |
-| G | H |
-| H | J |
-| I | I |
-| J | K |
-| K | L |
-| L | N |
-| M | 4 |
-| N | Q |
-| O | O |
-| P | 2 |
-| Q | R |
-| R | T |
-| S | 1 |
-| T | V |
-| U | U |
-| V | W |
-| W | X |
-| X | Y |
-| Y | Z |
-| Z | B |
-
-### Ejemplo
-
-| Texto Original | Texto Encriptado |
-|:--------------|:-----------------|
-| `Clan Spem` | `Dnaq 1234` |
-| `Hola Mundo` | `Jona 4uqfo` |
-
-> **Nota:** Las vocales **A, I, O, U** permanecen iguales. Los números **1, 2, 3, 4** representan **S, P, E, M** respectivamente.
 
 ---
 
