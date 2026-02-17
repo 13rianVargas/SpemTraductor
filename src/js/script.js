@@ -134,31 +134,33 @@ function clearTextareas() {
 }
 
 
-// Función para mostrar un mensaje temporal
+// Función para mostrar un mensaje temporal (toast)
 function showMessage(msg) {
     let messageDiv = document.getElementById('copy-message');
     if (!messageDiv) {
         messageDiv = document.createElement('div');
         messageDiv.id = 'copy-message';
-        messageDiv.style.position = 'fixed';
-        messageDiv.style.top = '50%';
-        messageDiv.style.left = '50%';
-        messageDiv.style.transform = 'translate(-50%, -50%)';
-        messageDiv.style.background = '#7a2c17';
-        messageDiv.style.color = '#fff';
-        messageDiv.style.padding = '20px 48px';
-        messageDiv.style.borderRadius = '16px';
-        messageDiv.style.fontSize = '1.7em';
-        messageDiv.style.fontWeight = 'bold';
-        messageDiv.style.boxShadow = '0 4px 16px rgba(0,0,0,0.18)';
-        messageDiv.style.zIndex = '9999';
-        messageDiv.style.display = 'none';
-        messageDiv.style.textAlign = 'center';
+        messageDiv.className = 'toast';
+        messageDiv.innerHTML = `
+            <span class="toast-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 12.5L10 17L19 8" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </span>
+            <span class="toast-text"></span>
+        `;
         document.body.appendChild(messageDiv);
     }
-    messageDiv.textContent = msg;
-    messageDiv.style.display = 'block';
-    setTimeout(() => {
-        messageDiv.style.display = 'none';
+    const messageText = messageDiv.querySelector('.toast-text');
+    messageText.textContent = msg;
+
+    // Forzar reflow para reiniciar la animación
+    messageDiv.classList.remove('show');
+    void messageDiv.offsetWidth;
+    messageDiv.classList.add('show');
+
+    clearTimeout(messageDiv._timeout);
+    messageDiv._timeout = setTimeout(() => {
+        messageDiv.classList.remove('show');
     }, 1400);
 }

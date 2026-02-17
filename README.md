@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![SPEM Emblem](SpemTraductorV3/img/SPEM%20Emblem.png)
+![SPEM Emblem](src/assets/img/SPEM%20Emblem.png)
 
 [![Demo](https://img.shields.io/badge/Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://clanspem.vercel.app)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/es/docs/Web/HTML)
@@ -88,7 +88,7 @@ Si deseas ejecutar el proyecto en tu máquina local:
 git clone https://github.com/13rianVargas/SpemTraductor.git
 
 # Navega al directorio
-cd SpemTraductor/SpemTraductorV3
+cd SpemTraductor
 
 # Abre index.html en tu navegador
 # Opción 1: Doble clic en el archivo
@@ -96,6 +96,8 @@ cd SpemTraductor/SpemTraductorV3
 npx serve .
 # o
 python -m http.server 8000
+
+# Luego abre src/index.html
 ```
 
 ---
@@ -106,13 +108,17 @@ python -m http.server 8000
 SpemTraductor/
 ├── README.md                 # Documentación del proyecto
 ├── .gitignore               # Archivos ignorados por Git
-└── SpemTraductorV3/
+├── portfolio-cover.png      # Imagen de portada del proyecto
+└── src/
     ├── index.html           # Página principal
-    ├── script.js            # Lógica de encriptación/desencriptación
-    ├── style.css            # Estilos y diseño responsivo
-    └── img/
-        ├── SPEM Emblem.png  # Emblema del clan
-        └── SPEM Shield.png  # Escudo del clan
+    ├── css/
+    │   └── style.css        # Estilos y diseño responsivo
+    ├── js/
+    │   └── script.js        # Lógica de encriptación/desencriptación
+    └── assets/
+        └── img/
+            ├── SPEM Emblem.png  # Emblema del clan
+            └── SPEM Shield.png  # Escudo del clan
 ```
 
 ---
