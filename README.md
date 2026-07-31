@@ -2,10 +2,12 @@
 
 <div align="center">
 
-![SpemTraductor](portfolio-cover.png)
+![SpemEmblema](src/assets/img/SPEM-Emblem.png)
+
+[![GitHub Repo stars](https://img.shields.io/github/stars/13rianVargas/SpemTraductor?style=for-the-badge&logo=github&logoColor=white)](https://github.com/13rianVargas/SpemTraductor/stargazers)
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://spem-traductor.vercel.app)
-[![License: MIT](https://img.shields.io/badge/License-MIT-90271E?style=for-the-badge)](LICENSE)
+[![License: Clan SPEM Only](https://img.shields.io/badge/License-Clan_SPEM_Only-90271E?style=for-the-badge)](LICENSE)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
@@ -33,13 +35,16 @@
 - [Improvement Backlog](#improvement-backlog)
 - [Contributing](#contributing)
 - [License](#license)
+- [Copyright](#copyright)
 - [Author](#author)
 
 ---
 
 ## Executive Summary
 
-SpemTraductor is a browser-resident text transformation tool that implements **SpemCode**, a monoalphabetic substitution cipher defined over a 30-symbol alphabet (`a`-`z` plus the digits `1`-`4`). It was built for Clan SPEM, a gaming community that uses the cipher for internal messaging.
+SpemTraductor is a browser-resident text transformation tool that implements **SpemCode**, a monoalphabetic substitution cipher defined over a 30-symbol alphabet (`a`-`z` plus the digits `1`-`4`).
+
+It was built for **Clan SPEM**, the senior youth section of **Grupo Scout 74** in Bogota, Colombia. Scouting has a long tradition of ciphers and secret codes as part of patrol craft, and SpemCode continues it: the clan uses it for internal messaging, games, and trail markers. This tool replaces the pencil-and-paper lookup with something the members can use from a phone.
 
 The system is intentionally minimal. It has no backend, no build pipeline, no package manager, and no runtime dependencies: the deployed artifact is the source. Every transformation happens synchronously in the browser against an in-memory lookup table, and no input ever leaves the client.
 
@@ -143,17 +148,17 @@ Rule 3 is why the table looks irregular at a glance: `l` maps to `n` because `m`
 ### Substitution Table
 
 | Plain | Cipher | Plain | Cipher | Plain | Cipher |
-|:-----:|:------:|:-----:|:------:|:-----:|:------:|
-| `a` | `a` | `k` | `l` | `u` | `u` |
-| `b` | `c` | `l` | `n` | `v` | `w` |
-| `c` | `d` | `m` | `4` | `w` | `x` |
-| `d` | `f` | `n` | `q` | `x` | `y` |
-| `e` | `3` | `o` | `o` | `y` | `z` |
-| `f` | `g` | `p` | `2` | `z` | `b` |
-| `g` | `h` | `q` | `r` | `1` | `s` |
-| `h` | `j` | `r` | `t` | `2` | `p` |
-| `i` | `i` | `s` | `1` | `3` | `e` |
-| `j` | `k` | `t` | `v` | `4` | `m` |
+| :---: | :----: | :---: | :----: | :---: | :----: |
+|  `a`  |  `a`   |  `k`  |  `l`   |  `u`  |  `u`   |
+|  `b`  |  `c`   |  `l`  |  `n`   |  `v`  |  `w`   |
+|  `c`  |  `d`   |  `m`  |  `4`   |  `w`  |  `x`   |
+|  `d`  |  `f`   |  `n`  |  `q`   |  `x`  |  `y`   |
+|  `e`  |  `3`   |  `o`  |  `o`   |  `y`  |  `z`   |
+|  `f`  |  `g`   |  `p`  |  `2`   |  `z`  |  `b`   |
+|  `g`  |  `h`   |  `q`  |  `r`   |  `1`  |  `s`   |
+|  `h`  |  `j`   |  `r`  |  `t`   |  `2`  |  `p`   |
+|  `i`  |  `i`   |  `s`  |  `1`   |  `3`  |  `e`   |
+|  `j`  |  `k`   |  `t`  |  `v`   |  `4`  |  `m`   |
 
 Uppercase letters map to the uppercase of their substitute. Every other character passes through untouched.
 
@@ -175,13 +180,13 @@ The capital `S` is unrecoverable. This is inherent to a design that substitutes 
 
 ## Tech Stack
 
-| Technology | Architectural Role |
-|------------|--------------------|
-| **HTML5** | Semantic document structure. Native `<label>`/`<textarea>` association supplies accessibility without ARIA scaffolding. |
-| **CSS3** | Presentation layer. Custom properties centralize the design tokens; flexbox drives the responsive layout with no framework. |
-| **Vanilla JavaScript** | Transformation layer. Plain object literals serve as O(1) lookup tables; no classes, no modules, no transpilation. |
+| Technology                | Architectural Role                                                                                                                           |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| **HTML5**                 | Semantic document structure. Native `<label>`/`<textarea>` association supplies accessibility without ARIA scaffolding.                      |
+| **CSS3**                  | Presentation layer. Custom properties centralize the design tokens; flexbox drives the responsive layout with no framework.                  |
+| **Vanilla JavaScript**    | Transformation layer. Plain object literals serve as O(1) lookup tables; no classes, no modules, no transpilation.                           |
 | **Google Fonts (Lexend)** | The single external resource, loaded via `<link>`. Lexend is optimized for reading proficiency, which suits a text-transformation interface. |
-| **Vercel** | Static hosting and CI. Every push to `main` triggers an automatic deploy; no build command runs because there is nothing to build. |
+| **Vercel**                | Static hosting and CI. Every push to `main` triggers an automatic deploy; no build command runs because there is nothing to build.           |
 
 The absence of a bundler, package manager, and framework is a deliberate constraint, not a gap. It keeps the deployed artifact byte-identical to the source, eliminates the supply chain entirely, and makes the project readable end to end by someone learning front-end fundamentals.
 
@@ -228,7 +233,7 @@ SpemTraductor/
 ├── README.md                       # This document
 ├── CONTRIBUTING.md                 # Contribution workflow and constraints
 ├── AGENTS.md                       # Operational context for AI coding agents
-├── LICENSE                         # MIT
+├── LICENSE                         # Proprietary, Clan SPEM members only
 ├── .gitignore
 ├── portfolio-cover.png             # 1200x630 social and portfolio card
 └── src/                            # Vercel Root Directory
@@ -239,8 +244,8 @@ SpemTraductor/
     │   └── script.js               # Cipher tables, clipboard adapter, toast
     └── assets/
         └── img/
-            ├── SPEM Emblem.png     # Clan emblem
-            ├── SPEM Shield.png     # Clan shield, used in the header
+            ├── SPEM-Emblem.png     # Clan emblem
+            ├── SPEM-Shield.png     # Clan shield, used in the header
             ├── favicon.png         # 96x96 icon derived from the shield
             └── portfolio-cover.png # Served copy for Open Graph metadata
 ```
@@ -254,7 +259,7 @@ Known technical debt, tracked openly rather than hidden:
 - **Single source of truth for the substitution table.** `src/js/script.js` currently maintains two hand-written mirror dictionaries, one per direction. They must be edited in lockstep, which is a drift hazard. The forward table should be the sole declaration, with the inverse derived programmatically at load time.
 - **Separate the cipher domain from the DOM.** `encrypt` and `decrypt` currently read from and write to the DOM directly, so the cipher cannot be exercised without a document. Extracting pure `encode(text)` and `decode(text)` functions would make the logic independently testable and reusable.
 - **Replace inline event handlers.** `oninput` and `onclick` attributes in the markup couple structure to behavior. Registering listeners with `addEventListener` would restore that separation.
-- **Optimize image assets.** `SPEM Shield.png` weighs 1.4 MB, which dominates the page's transfer size on a project that otherwise ships a few kilobytes of code.
+- **Optimize image assets.** `SPEM-Shield.png` weighs 1.4 MB, which dominates the page's transfer size on a project that otherwise ships a few kilobytes of code.
 - **Accessibility pass.** The toast has no `aria-live` region, so status messages are not announced to screen readers.
 
 Any of these that require splitting `script.js` into multiple files must resolve a real tradeoff first: native ES modules are blocked by CORS under `file://`, which would break the documented double-click workflow. A revealing-module pattern inside the existing single file avoids that cost.
@@ -263,13 +268,26 @@ Any of these that require splitting `script.js` into multiple files must resolve
 
 ## Contributing
 
-Contributions are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) first — it covers the local setup, the commit convention, and the two hard constraints (zero dependencies, zero build step) that any pull request must respect.
+**Code contributions are restricted to members of Clan SPEM**, in line with the license. If you are a member, read [CONTRIBUTING.md](CONTRIBUTING.md) — it covers the local setup, the commit convention, and the two hard constraints (zero dependencies, zero build step) that any pull request must respect.
+
+Anyone is welcome to open an [issue](https://github.com/13rianVargas/SpemTraductor/issues) to report a bug or discuss the implementation. Reading the code and learning from it is exactly why it is published.
 
 ---
 
 ## License
 
-Distributed under the MIT License. See [LICENSE](LICENSE) for the full text.
+This project is **not open source**. It is distributed under the SpemTraductor Community License: use and modification are granted only to members of Clan SPEM, Grupo Scout 74. See [LICENSE](LICENSE) for the full terms.
+
+The source is published for transparency, portfolio, and educational review. GitHub's Terms of Service allow any user to view and fork public repositories; the license does not attempt to override that, but forking grants no right to use, deploy, or redistribute the Software.
+
+---
+
+## Copyright
+
+Copyright in this work arises automatically upon creation under the Berne Convention and Colombian law (Law 23 of 1982, Decision Andina 351 of 1993). No registration is required for it to hold.
+
+- **Software** — source code, documentation, and architecture: copyright 13rian Vargas.
+- **Visual identity** — the SPEM emblem, shield, and the names SPEM and Clan SPEM: property of Clan SPEM, Grupo Scout 74, Bogota, Colombia.
 
 ---
 
@@ -280,4 +298,4 @@ Distributed under the MIT License. See [LICENSE](LICENSE) for the full text.
 [![Linktree](https://img.shields.io/badge/Linktree-13rianVargas-39E09B?style=for-the-badge&logo=linktree&logoColor=white)](https://linktr.ee/13rianVargas)
 [![GitHub](https://img.shields.io/badge/GitHub-13rianVargas-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/13rianVargas)
 
-Built for **Clan SPEM**, whose collaboration shaped the cipher and the tool around it.
+Built for **Clan SPEM**, Grupo Scout 74, Bogota — whose members shaped the cipher and the tool around it.

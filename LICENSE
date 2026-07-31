@@ -1,16 +1,86 @@
-MIT License
+SpemTraductor Community License
 
-Copyright (c) 2026 13rian Vargas
+Copyright (c) 2026 13rian Vargas. All rights reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+The visual identity assets of Clan SPEM are the property of Clan SPEM,
+Grupo Scout 74, Bogota, Colombia.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+This is a proprietary license. It is NOT an open source license and it is NOT
+approved by the Open Source Initiative. The source code is published for
+transparency, portfolio, and educational review only.
+
+--------------------------------------------------------------------------------
+1. DEFINITIONS
+--------------------------------------------------------------------------------
+
+"Software" means the source code, documentation, configuration, and any other
+material in this repository, excluding the Clan Assets defined below.
+
+"Clan Assets" means the SPEM emblem, the SPEM shield, the derived favicon, the
+names "SPEM", "Clan SPEM", and "SpemTraductor", the SpemCode cipher itself, and
+any other element of the visual or verbal identity of Clan SPEM.
+
+"Authorized User" means an active member of Clan SPEM, Grupo Scout 74,
+Bogota, Colombia.
+
+--------------------------------------------------------------------------------
+2. GRANT TO AUTHORIZED USERS
+--------------------------------------------------------------------------------
+
+Authorized Users are granted a non-exclusive, non-transferable, revocable right
+to use, copy, modify, and run the Software for the internal, non-commercial
+purposes of Clan SPEM, provided that this license notice is retained in all
+copies and modified versions.
+
+This grant terminates automatically when a person ceases to be an
+Authorized User.
+
+--------------------------------------------------------------------------------
+3. RESTRICTIONS FOR EVERYONE ELSE
+--------------------------------------------------------------------------------
+
+No license, right, or permission is granted to any person who is not an
+Authorized User. Without prior written permission from the copyright holder,
+you may NOT:
+
+  a) use the Software or any part of it, in any context;
+  b) copy, reproduce, or republish the Software;
+  c) modify the Software or create derivative works from it;
+  d) distribute, sublicense, sell, rent, or otherwise transfer the Software;
+  e) deploy or host the Software, publicly or privately;
+  f) use the Software for any commercial purpose.
+
+--------------------------------------------------------------------------------
+4. CLAN ASSETS
+--------------------------------------------------------------------------------
+
+No license to the Clan Assets is granted to anyone under this document,
+including Authorized Users, beyond their use within this Software as
+distributed. The Clan Assets may not be used to identify, brand, or endorse any
+other project, product, or organization.
+
+--------------------------------------------------------------------------------
+5. PLATFORM ACKNOWLEDGEMENT
+--------------------------------------------------------------------------------
+
+This repository is hosted publicly on GitHub. The GitHub Terms of Service grant
+every GitHub user the ability to view and to fork public repositories, and this
+license does not attempt to override that platform-level permission.
+
+Forking this repository under those Terms does NOT grant any right listed in
+Section 3. A fork may be viewed; it may not be used, modified for use,
+deployed, or distributed by anyone who is not an Authorized User.
+
+--------------------------------------------------------------------------------
+6. PERMISSION REQUESTS
+--------------------------------------------------------------------------------
+
+Rights beyond the scope of this license may be requested from the copyright
+holder at https://linktr.ee/13rianVargas
+
+--------------------------------------------------------------------------------
+7. NO WARRANTY AND NO LIABILITY
+--------------------------------------------------------------------------------
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -19,3 +89,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+--------------------------------------------------------------------------------
+8. GOVERNING LAW
+--------------------------------------------------------------------------------
+
+This license is governed by the copyright law of the Republic of Colombia,
+including Decision Andina 351 of 1993 and Law 23 of 1982, and by the Berne
+Convention. Copyright in the Software arises automatically upon its creation;
+no registration is required for it to be enforceable.

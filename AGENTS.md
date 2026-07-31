@@ -7,7 +7,7 @@
 
 ## Project Overview
 
-**SpemTraductor** is a static web tool that encodes and decodes text using **SpemCode**, a monoalphabetic substitution cipher created for internal communication within Clan SPEM.
+**SpemTraductor** is a static web tool that encodes and decodes text using **SpemCode**, a monoalphabetic substitution cipher created for internal communication within **Clan SPEM**, the senior youth section of **Grupo Scout 74** in Bogota, Colombia.
 
 **Live:** https://spem-traductor.vercel.app
 
@@ -31,7 +31,7 @@ SpemCode is a substitution cipher, not cryptography. It provides no confidential
 SpemTraductor/
 ├── README.md
 ├── CONTRIBUTING.md
-├── LICENSE                     # MIT
+├── LICENSE                     # Proprietary, Clan SPEM members only
 ├── AGENTS.md                   # this file
 ├── portfolio-cover.png         # 1200x630 social/portfolio card
 └── src/
@@ -42,9 +42,9 @@ SpemTraductor/
     │   └── script.js           # SpemCode cipher logic
     └── assets/
         └── img/
-            ├── SPEM Emblem.png
-            ├── SPEM Shield.png
-            ├── favicon.png              # 96x96, derived from SPEM Shield.png
+            ├── SPEM-Emblem.png
+            ├── SPEM-Shield.png
+            ├── favicon.png              # 96x96, derived from SPEM-Shield.png
             └── portfolio-cover.png      # served copy, used by Open Graph tags
 ```
 
@@ -86,6 +86,16 @@ Vercel serves this project with **Root Directory set to `src`** in the project s
   fix: resolve decryption edge case with special chars
   ```
 - Never add `Co-Authored-By` or other AI attribution trailers to commits.
+
+---
+
+## Licensing
+
+This project is **not open source**. See [LICENSE](LICENSE). Use and modification are granted only to members of Clan SPEM, Grupo Scout 74.
+
+- Do not add badges, text, or metadata describing the project as MIT, open source, or OSI-approved.
+- Do not add a `SPDX-License-Identifier` header for any OSI license.
+- Copyright in the code belongs to 13rian Vargas. The visual identity — emblem, shield, and the names SPEM and Clan SPEM — belongs to Clan SPEM and must not be replaced, recolored, or reused for anything else.
 
 ---
 

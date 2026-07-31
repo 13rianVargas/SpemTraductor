@@ -1,6 +1,19 @@
 # Contributing to SpemTraductor
 
-Thanks for your interest in improving SpemTraductor. This document covers everything you need to make a contribution that gets merged.
+Thanks for your interest in SpemTraductor. This document covers everything you need to make a contribution that gets merged.
+
+---
+
+## Who Can Contribute
+
+**Code contributions are restricted to members of Clan SPEM, Grupo Scout 74.** This project is not open source; see [LICENSE](LICENSE) for the terms. Pull requests from outside the clan cannot be merged, because the license grants no right to create derivative works.
+
+That restriction applies to code only. **Anyone may:**
+
+- Open an [issue](https://github.com/13rianVargas/SpemTraductor/issues) to report a bug or ask about the implementation.
+- Read the source and learn from it. That is a large part of why it is published.
+
+If you are outside the clan and want to build something on top of this, contact the author at [linktr.ee/13rianVargas](https://linktr.ee/13rianVargas) rather than opening a pull request.
 
 ---
 
@@ -100,4 +113,6 @@ Open an issue at [github.com/13rianVargas/SpemTraductor/issues](https://github.c
 
 ## License
 
-By contributing, you agree that your contributions will be licensed under the [MIT License](LICENSE).
+By contributing, you agree that your contributions are assigned to the copyright holder and distributed under the [SpemTraductor Community License](LICENSE). You also confirm that you are a member of Clan SPEM, Grupo Scout 74, and therefore authorized to modify the Software.
+
+The Clan Assets — the SPEM emblem, the shield, and the names SPEM and Clan SPEM — belong to Clan SPEM. Do not replace, recolor, or reuse them for anything outside this project.
