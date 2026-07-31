@@ -1,2 +1,22 @@
-
+# OS
 .DS_Store
+Thumbs.db
+
+# Editors
+.idea/
+.vscode/
+
+# Tooling / deploy
+node_modules/
+.vercel
+*.log
+
+# Environment
+.env
+.env.*
+
+# Temp scripts
+tmp/
+
+# Intermediate image sources
+*.heic
