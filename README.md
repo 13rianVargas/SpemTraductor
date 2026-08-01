@@ -147,22 +147,32 @@ Rule 3 is why the table looks irregular at a glance: `l` maps to `n` because `m`
 
 ### Substitution Table
 
-| Plain | Cipher | Plain | Cipher | Plain | Cipher |
-| :---: | :----: | :---: | :----: | :---: | :----: |
-|  `a`  |  `a`   |  `k`  |  `l`   |  `u`  |  `u`   |
-|  `b`  |  `c`   |  `l`  |  `n`   |  `v`  |  `w`   |
-|  `c`  |  `d`   |  `m`  |  `4`   |  `w`  |  `x`   |
-|  `d`  |  `f`   |  `n`  |  `q`   |  `x`  |  `y`   |
-|  `e`  |  `3`   |  `o`  |  `o`   |  `y`  |  `z`   |
-|  `f`  |  `g`   |  `p`  |  `2`   |  `z`  |  `b`   |
-|  `g`  |  `h`   |  `q`  |  `r`   |  `1`  |  `s`   |
-|  `h`  |  `j`   |  `r`  |  `t`   |  `2`  |  `p`   |
-|  `i`  |  `i`   |  `s`  |  `1`   |  `3`  |  `e`   |
-|  `j`  |  `k`   |  `t`  |  `v`   |  `4`  |  `m`   |
+Read it vertically: each cipher symbol sits directly under the character it replaces.
 
-Uppercase letters map to the uppercase of their substitute. Every other character passes through untouched.
+| **Plain**  |  a  |  b  |  c  |  d  |   e   |  f  |  g  |  h  |  i  |  j  |  k  |  l  |   m   |
+| :--------- | :-: | :-: | :-: | :-: | :---: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :---: |
+| **Cipher** |  a  |  c  |  d  |  f  | **3** |  g  |  h  |  j  |  i  |  k  |  l  |  n  | **4** |
 
-**Worked example:** `Ejemplo: Clan Spem` encodes to `3k342no: Dnaq 1234`.
+| **Plain**  |  n  |  o  |   p   |  q  |  r  |   s   |  t  |  u  |  v  |  w  |  x  |  y  |  z  |
+| :--------- | :-: | :-: | :---: | :-: | :-: | :---: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| **Cipher** |  q  |  o  | **2** |  r  |  t  | **1** |  v  |  u  |  w  |  x  |  y  |  z  |  b  |
+
+| **Plain**  |  1  |  2  |  3  |  4  |
+| :--------- | :-: | :-: | :-: | :-: |
+| **Cipher** |  s  |  p  |  e  |  m  |
+
+The bold cells are the four letter-to-digit swaps (`s`, `p`, `e`, `m`), the ones responsible for the case limitation described below. The columns where plain and cipher match are the invariant vowels `a`, `i`, `o`, `u`.
+
+Uppercase letters map to the uppercase of their substitute. Every other character — spaces, punctuation, accented characters, and the digits `0` and `5`-`9` — passes through untouched.
+
+### Worked Example
+
+```text
+Plain    E  j  e  m  p  l  o  :     C  l  a  n     S  p  e  m
+Cipher   3  k  3  4  2  n  o  :     D  n  a  q     1  2  3  4
+```
+
+`Ejemplo: Clan Spem` encodes to `3k342no: Dnaq 1234`.
 
 ### Known Limitations
 
